@@ -21,6 +21,36 @@ body {
     padding: 2rem;
 }
 
+div.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.img {
+    position: relative;
+}
+
+/*
+div.ball {
+    margin: auto;
+    width: 110px;
+    height: 110px;
+    display: inline-block;
+    position: absolute;
+    top: 0.8rem;
+    left: 9.9rem;
+    background-color: transparent;
+    border-radius: 50%;
+    color: #111826;
+    text-transform: uppercase;
+
+    border-top: 0.2rem solid #6924FF;
+
+    animation: moveBall 2s infinite;
+}
+*/
 
 div.container {
     max-width: 31.25rem;
@@ -94,6 +124,16 @@ div.container main ul li a:hover {
 
     to {
         left: 0;
+    }
+}
+
+@keyframes moveBall {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
 
