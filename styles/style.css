@@ -55,6 +55,8 @@ div.ball {
 
 div.container {
     max-width: 31.25rem;
+    position: relative;
+    animation: move 0.5s;
 }
 
 
@@ -69,7 +71,8 @@ div.container header h1 {
 
 div.container header img {
     border-radius: 50%;
-    width: 6.5rem;
+    width: 100%;
+    max-width: 9rem;
     margin-top: 1rem;
 }
 
@@ -79,13 +82,6 @@ div.container header .text {
 
 div.container header .text h2 {
     font-size: 1.3rem;
-    position: relative;
-    animation: moveText 0.5s;
-}
-
-div.container header .text p {
-    position: relative;
-    animation: moveText 0.2s;
 }
 
 
@@ -135,7 +131,7 @@ div.container main ul li img {
 
 
 /* Animations */
-@keyframes moveText {
+@keyframes move {
     from {
         left: -300px;
     }
@@ -145,6 +141,7 @@ div.container main ul li img {
     }
 }
 
+/*
 @keyframes moveBall {
     from {
         transform: rotate(0deg);
@@ -154,7 +151,7 @@ div.container main ul li img {
         transform: rotate(360deg);
     }
 }
-
+*/
 
 /* Media Queries*/
 @media (min-width: 700px) {
