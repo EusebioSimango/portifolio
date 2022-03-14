@@ -17,6 +17,9 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+
+    animation: move;
+    animation-duration: 2s;
 }
 
 /* Header*/
@@ -65,7 +68,12 @@ main div.img img {
     width: 70%;
     max-width: 500px;
     border-radius: 50%;
-    
+    transition: 0.5s;  
+}
+
+main div.img img:hover {
+    animation: rotate;
+    animation-duration: 2s;
 }
 
 main ul {
@@ -82,11 +90,31 @@ main ul li {
 }
 
 main ul li:hover {
-    transform: translateY(-20%);
+    transform: translateY(-30%) scale(1.2);
 }
-
-
 
 main ul li img {
     width: 100%;
+}
+
+
+/* Animations */
+@keyframes move {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
