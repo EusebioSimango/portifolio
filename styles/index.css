@@ -16,10 +16,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-
-    animation: move;
-    animation-duration: 2s;
 }
 
 /* Header*/
@@ -39,6 +35,11 @@ header nav a {
     text-decoration: none;
     font-size: 1.5rem;
     color: white;
+
+    /*animation-name: color;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;*/
 }
 
 header nav ul li {
@@ -62,14 +63,12 @@ main div.text {
 }
 
 main div.text p {
-    line-height: 1.3rem;
+    line-height: 1.4rem;
 }
 
 main div.img {
-    text-align: center;
-    margin: auto;
-    cli;
-    background-color: #1CD3EB;
+    position: relative;
+    z-index: 1000;
 
 }
 
@@ -83,9 +82,25 @@ main div.img img {
     transition-property: transform;
 }
 
-main div.img img:hover {
-    transform: translateY(-15%) scale(0.8);
+main div.img::before {
+    content: "Olá!";
+    color: white;
 
+    font-size: 3rem;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    z-index: -100;
+}
+
+main div.img img:hover {
+    transform: translateX(-25%);
 }
 
 main ul {
@@ -111,13 +126,35 @@ main ul li img {
 
 
 /* Animations */
-@keyframes moves {
+@keyframes move {
     from {
-        transform: scale(0);
+        transform: scale(2);
     }
 
     to {
         transform: scale(1);
+    }
+}
+
+@keyframes color {
+    0% {
+        color: #1CD3EF;
+    }
+
+    25% {
+        color: #1c75ea;
+    }
+
+    50% {
+        color: #760cf0;
+    }
+
+    75% {
+        color: #1CD3EB;
+    }
+
+    100% {
+        color: #1651f3;
     }
 }
 
@@ -132,6 +169,10 @@ main ul li img {
 @media (min-width: 1000px) {
     header {
         padding: 15px;
+    }
+
+    header nav a {
+        font-size: 2rem;
     }
 
     section {
