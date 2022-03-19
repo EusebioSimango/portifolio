@@ -57,23 +57,35 @@ main {
     align-items: center;
 }
 
+main div.text {
+    max-width: 685px;
+}
+
+main div.text p {
+    line-height: 1.3rem;
+}
+
 main div.img {
     text-align: center;
     margin: auto;
+    cli;
+    background-color: #1CD3EB;
+
 }
 
 main div.img img {
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 70%;
+    width: 100%;
     max-width: 500px;
     border-radius: 50%;
-    transition: 0.5s;  
+    transition: .2s;
+    transition-property: transform;
 }
 
 main div.img img:hover {
-    animation: rotate;
-    animation-duration: 2s;
+    transform: translateY(-15%) scale(0.8);
+
 }
 
 main ul {
@@ -99,22 +111,40 @@ main ul li img {
 
 
 /* Animations */
-@keyframes move {
+@keyframes moves {
     from {
-        transform: translateX(-100%);
+        transform: scale(0);
     }
 
     to {
-        transform: translateX(0);
+        transform: scale(1);
     }
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
+
+/* Media Queries*/
+@media (min-width: 550px) {
+    main div.text h1 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    header {
+        padding: 15px;
     }
 
-    to {
-        transform: rotate(360deg);
+    section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    main div.text {
+        font-size: 1.5rem;
+    }
+
+    main div.text p {
+        line-height: 2.2rem;
     }
 }
