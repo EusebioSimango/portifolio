@@ -62,17 +62,39 @@ main div.text {
     max-width: 685px;
 }
 
+main div.text h1 {
+    margin-bottom: 0;
+}
+
 main div.text p {
     line-height: 1.4rem;
+    margin-top: 1rem;
+}
+
+main div .animation {
+    height: 2px;
+    border-top: 2px solid #1CD3EB;
+    border-radius: 10%;
+
+    position: relative;
+
+    animation-name: grow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 main div.img {
     position: relative;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 main div.img img {
+    z-index: -11;
     margin-top: 30px;
     margin-bottom: 30px;
     width: 100%;
@@ -82,6 +104,7 @@ main div.img img {
     transition-property: transform;
 }
 
+ /*
 main div.img::before {
     content: "Olá!";
     color: white;
@@ -89,38 +112,66 @@ main div.img::before {
     font-size: 3rem;
 
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 
     height: 100%;
-    width: 100%;
+    width: 90%;
 
     position: absolute;
-    z-index: -100;
+    z-index: -10;
 }
 
-main div.img img:hover {
-    transform: translateX(-25%);
+
+main div.img .animation {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 400px;
+    border-top: 2px solid #1CD3EB;
+    border-radius: 50%;
+    position: absolute;
+
+    overflow-y: hidden;
+
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-main ul {
+footer h2 {
+    animation-name: color;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+footer ul {
     list-style: none;
     text-align: center;
     display: flex;
 }
 
-main ul li {
+footer ul li {
     width: 42px;
     border-radius: 50%;
     margin: 10px;
     transition: 0.3s transform;
 }
 
-main ul li:hover {
+footer ul li:hover {
     transform: translateY(-30%) scale(1.2);
 }
 
-main ul li img {
+footer ul li img {
     width: 100%;
 }
 
@@ -139,31 +190,32 @@ main ul li img {
 @keyframes color {
     0% {
         color: #1CD3EF;
-    }
-
-    25% {
-        color: #1c75ea;
+        transform: scale(1);
     }
 
     50% {
         color: #760cf0;
     }
 
-    75% {
-        color: #1CD3EB;
-    }
-
     100% {
+        transform: scale(1.1);
         color: #1651f3;
+    }
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+        transform: scale(0);
+    } to {
+        width: 90%;
     }
 }
 
 
 /* Media Queries*/
-@media (min-width: 550px) {
-    main div.text h1 {
-        margin-bottom: 1rem;
-    }
+@media (max-width: 550px) {
+  
 }
 
 @media (min-width: 1000px) {
