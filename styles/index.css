@@ -18,20 +18,54 @@ body {
     align-items: center;
 }
 
-/* Header*/
 header {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+main {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+footer {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+button {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+div.was-clicked {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* header.show*/
+body header.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
     background-color: transparent;
     width: 100%;
     padding: 10px;
 }
 
-header nav {
+header.show nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 
-header nav a {
+header.show nav a {
     text-decoration: none;
     font-size: 1.5rem;
     color: white;
@@ -42,7 +76,7 @@ header nav a {
     animation-direction: alternate-reverse;*/
 }
 
-header nav ul li {
+header.show nav ul li {
     list-style: none;
     background-color: #1CD3EB;
     border-radius: 6px;
@@ -50,28 +84,31 @@ header nav ul li {
     height: 100%;
 }
 
-/* Main */
-main {
+
+/* main.show */
+main.show {
+    opacity: 1;
+    visibility: visible;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main div.text {
+main.show div.text {
     max-width: 685px;
 }
 
-main div.text h1 {
+main.show div.text h1 {
     margin-bottom: 0;
 }
 
-main div.text p {
+main.show div.text p {
     line-height: 1.4rem;
     margin-top: 1rem;
 }
 
-main div .animation {
+main.show div .animation {
     height: 2px;
     border-top: 2px solid #1CD3EB;
     border-radius: 10%;
@@ -84,7 +121,7 @@ main div .animation {
     animation-direction: alternate;
 }
 
-main div.img {
+main.show div.img {
     position: relative;
     z-index: 1000;
     display: flex;
@@ -93,19 +130,19 @@ main div.img {
 
 }
 
-main div.img img {
+main.show div.img img {
     z-index: -11;
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 100%;
-    max-width: 500px;
+    width: 80%;
+    max-width: 450px;
     border-radius: 50%;
     transition: .2s;
     transition-property: transform;
 }
 
  /*
-main div.img::before {
+main.show div.img::before {
     content: "Olá!";
     color: white;
 
@@ -123,7 +160,7 @@ main div.img::before {
 }
 
 
-main div.img .animation {
+main.show div.img .animation {
     height: 100%;
     max-height: 400px;
     width: 100%;
@@ -140,41 +177,81 @@ main div.img .animation {
 }
 */
 
-footer {
+/* footer.show */
+footer.show {
+    opacity: 1;
+    visibility: visible;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-footer h2 {
+footer.show h2 {
     animation-name: color;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
-footer ul {
+footer.show ul {
     list-style: none;
     text-align: center;
     display: flex;
 }
 
-footer ul li {
+footer.show ul li {
     width: 42px;
     border-radius: 50%;
     margin: 10px;
     transition: 0.3s transform;
 }
 
-footer ul li:hover {
+footer.show ul li:hover {
     transform: translateY(-30%) scale(1.2);
 }
 
-footer ul li img {
+footer.show ul li img {
     width: 100%;
 }
 
+
+/* Button */
+button.show {
+    background-color: #1CD3EF;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 1rem;
+
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+button.show:hover {
+    filter: brightness(150%);
+}
+
+/* Was clicked */
+div.was-clicked.show {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+
+    font-size: 3rem;
+    text-align: center;
+}
+
+div.was-clicked.show span {
+    font-size: 5rem;
+}
 
 /* Animations */
 @keyframes move {
@@ -190,7 +267,6 @@ footer ul li img {
 @keyframes color {
     0% {
         color: #1CD3EF;
-        transform: scale(1);
     }
 
     50% {
@@ -198,7 +274,6 @@ footer ul li img {
     }
 
     100% {
-        transform: scale(1.1);
         color: #1651f3;
     }
 }
@@ -214,16 +289,12 @@ footer ul li img {
 
 
 /* Media Queries*/
-@media (max-width: 550px) {
-  
-}
-
 @media (min-width: 1000px) {
-    header {
+    header.show {
         padding: 15px;
     }
 
-    header nav a {
+    header.show nav a {
         font-size: 2rem;
     }
 
@@ -233,11 +304,11 @@ footer ul li img {
         align-items: center;
     }
 
-    main div.text {
+    main.show div.text {
         font-size: 1.5rem;
     }
 
-    main div.text p {
+    main.show div.text p {
         line-height: 2.2rem;
     }
 }
