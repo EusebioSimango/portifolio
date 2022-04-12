@@ -18,3 +18,13 @@ const sr = ScrollReveal({
     ScrollReveal().reveal('section .text h1', { delay: 400 });
     
     ScrollReveal().reveal('section .container', { delay: 600 });
+
+
+const links = document.querySelectorAll(".pos-f-t li")
+
+links.forEach(link => {
+        link.addEventListener("click", () => {
+        console.log("Hey")
+        const menu = document.querySelector(".collapse.show")
+        menu.classList.remove("show")
+})})
