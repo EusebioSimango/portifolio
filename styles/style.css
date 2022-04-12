@@ -195,6 +195,7 @@ section#about .contacts .contact {
     border-radius: 50%;
     padding: 17px;
     margin-bottom: 10px;
+    transition: transform 0.3s;
 }
 
 section#about .contacts ul {
@@ -228,6 +229,11 @@ section#projects .container .project {
     background-color: #333333;
     margin: 15px;
     padding: 15px;
+}
+
+section#projects .container .project:hover {
+    background-color: #333343;
+    color: white;
 }
 
 section#projects .container .project p a {
@@ -272,6 +278,12 @@ section#myskills .skills ul {
 
 section#myskills .skills ul li {
     margin: 10px;
+    transition: transform 0.3s;
+}
+
+section#myskills .skills ul li:hover,
+#contact ul .contact:hover {
+    transform: translateY(-15%);
 }
 
 @media (min-width: 730px) {
