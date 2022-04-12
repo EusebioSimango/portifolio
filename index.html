@@ -4,50 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeffer Marcelino</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="show">
-        <nav>
-            <p><a href="index.html">Jeffer Marcelino</a></p>
-            <ul>
-                <li>About Me</li>
-            </ul>
-        </nav>
+    <header>
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-dark p-4">
+                <h1>Portfolio</h5>
+                <nav>
+                    <div class="main">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About me</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#myskills">My skills</a></li>
+                        </ul>
+                    </div>
+                </nav>
+              </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+          </div>
+
+        <div class="pc">
+            <h2>Portfolio</h2>
+            <nav>
+                <div class="main">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#myskills">My skills</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="show">
-        <section>
+    <main>
+        <section id="home">
             <div class="text">
-                <h1>Olá! Bem vindo ao meu Website!</h1>
-                <div class="animation"></div>
-                <p>Meu nome é <strong>Jeffer Marcelino Sunde</strong>, tenho <span>16</span> anos, estou estudando desenvolvimento web front-end e quero me tornar profissional nessa área. Meu objectivo é ter uma equipa de genios, kkkkk, e dar duro todo dia. Programação é algo que eu amo, amo mesmo, as vezes fico meio irritado quando não consigo resolver um bug, mas depois tudo fica bem.</p>
+                <h1>Hi, I am Jeffer Marcelino :)</h1>
+                <p>Front-end developer</p>
+                <div class="buttons">
+                    <button class="contact"><a href="#contact">CONTACT</a></button>
+                    <button class="download">Download CV</button>
+                </div>
             </div>
-            
             <div class="img">
-                <img src="images/img.jpg" alt="Me">
+                <img src="images/africanmanpc.svg" alt="Just a young boy on computer">
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="text">
+                <h1>About me</h1>
+                <p>Hi there, I'm a teenager, otaku, nerd and front-end developer, I like so much programming, now I'm learning ReactJS. You can help me acessing my repos and giving your feedback. I want to work with other people and grow up, if you are looking for someone you can touch me, I'll be so happy to help you.</p>
+            </div>
+            <div class="contacts" id="contact">
+                <ul>
+                    <div class="group">
+                        <li class="contact"><img src="images/smile.svg" alt=""></li>
+                        <div class="text">
+                            <h4>My name</h4>
+                            <p>Jeffer Marcelino</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <li class="contact"><img src="images/phone.svg" alt=""></li>
+                        <div class="text">
+                            <h4>Cell</h4>
+                            <p>+258 84 399 77 30</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <li class="contact"><img src="images/mail.svg" alt=""></li>
+                        <div class="text">
+                            <h4>E-mail</h4>
+                            <p>jeffersunde72@gmail.com</p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <div class="project">
+                    <div class="project img"></div>
+                    <h2>Title</h2>
+                    <p>HTML, CSS and JS</p>
+                </div>
+
+                <div class="project">
+                    <div class="project img"></div>
+                    <h2>Title</h2>
+                    <p>HTML, CSS and JS</p>
+                </div>
+
+                <div class="project">
+                    <div class="project img"></div>
+                    <h2>Title</h2>
+                    <p>HTML, CSS and JS</p>
+                </div>
+
+                <div class="project">
+                    <div class="project img"></div>
+                    <h2>Title</h2>
+                    <p>HTML, CSS and JS</p>
+                </div>
+
+                <div class="project">
+                    <div class="project img"></div>
+                    <h2>Title</h2>
+                    <p>HTML, CSS and JS</p>
+                </div>
+
+                <div class="project">
+                    <div class="project img"></div>
+                    <h2>Title</h2>
+                    <p>HTML, CSS and JS</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="service">
+                <img src="images/code.svg" alt="Code image">
+                <h3>Website creation</h3>
+            </div>
+
+            <div class="service">
+                <img src="images/smartphone.svg" alt="">
+                <h3>Responsive Websites</h3>
+            </div>
+        </section>
+
+        <section id="myskills">
+            <h1>My skills</h1>
+            <div class="skills">
+                <ul>
+                    <li><img src="images/html.svg" alt="HTML logo"></li>
+                    <li><img src="images/css.svg" alt="CSS logo"></li>
+                    <li><img src="images/js.svg" alt="JavaScript logo"></li>
+                    <li><img src="images/react.svg" alt="ReactJS logo"></li>
+                </ul>
             </div>
         </section>
     </main>
-    <footer class="social- show">
-        <h2>Entre em Contacto</h2> <br>
-        <ul>
-            <li><a href="https://github.com/JefferMarcelino" target="_blank"><img src="images/github.png" alt="github"></a></li>
-            <li><a href="https://twitter.com/JefferMarcelin" target="_blank"><img src="images/twitter.png" alt="twitter"></a></li>
-            <li><a href="https://www.linkedin.com/in/jeffer-marcelino-94422a22b/" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a></li>
-            <li><a href="https://www.instagram.com/jeffer_marcelin/" target="_blank"><img src="images/instagram.png" alt="instagram"></a></li>
-            <li><a href="https://www.youtube.com/channel/UCXBFKr-rZ787IhXAzsnrw-Q"><img src="images/youtube.png" alt="youtube"></a></li>
-        </ul>
-    </footer>
-    <button class="show">Não Clique</button>
-
-    <div class="was-clicked">
-        <p>Voce clicou no botão.</p>
-        <p>Faltam</p>
-        <span>5</span>
-        <p>Segundos...</p>
-    </div>
-
-    <script src="scripts/script.js"></script>
 </body>
 </html>
