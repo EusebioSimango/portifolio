@@ -28,6 +28,10 @@ html {
     scroll-behavior: smooth;
 }
 
+:target {
+    scroll-margin-top: 100px;
+}
+
 body {
     background-color: var(--bg-color);
     color: white;
@@ -103,6 +107,7 @@ header .navbar-toggler {
 section {
     padding: 20px;
     max-width: 1250px;
+    height: 100%;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
