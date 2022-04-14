@@ -52,6 +52,13 @@ a:hover {
     color: white;
 }
 
+main {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
 section {
     padding: 20px;
     max-width: 1250px;

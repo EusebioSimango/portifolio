@@ -12,48 +12,23 @@
     <link rel="stylesheet" href="styles/global.css">
 </head>
 <body>
-    <header>
-        <div class="pos-f-t">
-            <div class="collapse" id="navbarToggleExternalContent">
-              <div class="bg-dark p-4">
-                <h1>Portfolio</h5>
-                <nav>
-                    <div class="main">
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About me</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#myskills">My skills</a></li>
-                        </ul>
-                    </div>
-                </nav>
-              </div>
+    <header class="show">
+        <nav>
+            <div class="menu show">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#myskills">My skills</a></li>
+                </ul>
             </div>
-            <nav class="navbar navbar-dark bg-dark">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </nav>
-          </div>
-
-        <div class="pc">
-            <h2>Portfolio</h2>
-            <nav>
-                <div class="main">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About me</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#myskills">My skills</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+            <div class="toggle icon-menu"></div>
+            <div class="toggle icon-close"></div>
+        </nav>
     </header>
 
-    <main>
+    <main class="hidden">
         <section id="home">
             <div class="text">
                 <h1>Hi, I am Jeffer Marcelino :)</h1>
@@ -64,7 +39,7 @@
                 </div>
             </div>
             <div class="img">
-                <img src="images/africanmanpc.svg" alt="Just a young boy on computer">
+                <img src="images/computerBoy.svg" alt="Just a young boy on computer">
             </div>
         </section>
 
@@ -81,6 +56,7 @@
                         <div class="text">
                             <h4>Cell</h4>
                             <p>+258 84 399 77 30</p>
+                            <p>+258 87 012 61 03</p>
                         </div>
                     </div>
 
@@ -119,7 +95,7 @@
 
                 <div class="project">
                     <div class="text">
-                        <h2><a href="">Beautysalon</a></h2>
+                        <h2>Beautysalon</h2>
                         <p>A landing-page for a hair salon, where you can find a lot informations with just a click.</p> 
                         <p><a href="https://github.com/JefferMarcelino/beautysalon-nlw6-origin" target="_blank" rel="external">GitHub Repository</a></p>
                         <p><strong>HTML, CSS and JavaScript</strong></p>

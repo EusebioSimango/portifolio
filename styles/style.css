@@ -1,17 +1,34 @@
+.greeting {
+    text-align: center;
+    padding: 10px;
+}
+
 /* Header */
 header {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: none;
+}
+
+header.show {
     background-color: var(--bg-color);
+    padding: 30px;
+    width: 100%;
+    max-width: 1250px;
     display: flex;
-    position: fixed;
+    position: sticky;
+    opacity: 1;
+    visibility: visible;
+    justify-content: space-between;
+    align-items: center;
     z-index: 11000000;
     margin: auto;
     top: 0;
-    width: 100%;
-    margin: auto;
 }
 
-header h1 {
-    font-size: 26px;
+header nav {
+    margin: auto;
 }
 
 header nav ul {
@@ -31,30 +48,13 @@ header nav ul li a:hover {
     background-color: var(--bt-color-cv);
 }
 
-header .pos-f-t {
-    width: 100%;
-}
-
-header .pc {
-    margin: auto;
-    padding: 40px 0;
-    max-width: 1250px;
-    display: none;
-    opacity: 0;
-    position: none;
-}
-
-header .pc nav ul {
+header nav ul {
     display: flex;
     align-items: center;
 }
 
-header .pc nav ul li {
+header nav ul li {
     margin-right: 30px;
-}
-
-header .navbar-toggler {
-    outline: none;
 }
 
 
@@ -108,7 +108,7 @@ section#home .img {
 
 section#home .img img {
     margin: auto;
-    width: 75%;
+    width: 70%;
 }
 
 
@@ -239,25 +239,25 @@ section#myskills .skills ul li:hover,
 
 
 /* Media Queries */
-@media (min-width: 730px) {
-    header .pos-f-t {
+@media (max-width: 700px) {
+
+    main.hidden {
         display: none;
         opacity: 0;
+        visibility: hidden;
         position: none;
     }
 
-    header .pc {
-        max-height: 30px;
-        width: 100%;
-        display: flex;
-        opacity: 1;
-        position: relative;
-        align-items: center;
-        justify-content: space-around;
+    header {
+        height: 100vh;
     }
 
-    header .pc {
-        display: flex;
-        align-items: center;
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 40px 0px;
+        font-size: 2em;
     }
 }
