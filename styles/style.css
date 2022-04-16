@@ -150,7 +150,7 @@ section#about .contacts .group {
 section#about .contacts .contact {
     background-color: #212121;
     display: inline-block;
-    border-radius: 50%;
+    clip-path: circle();
     padding: 17px;
     margin-bottom: 10px;
     transition: transform 0.3s;
