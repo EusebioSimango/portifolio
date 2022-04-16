@@ -5,7 +5,6 @@ const sr = ScrollReveal({
         reset: true
     });
     
-    ScrollReveal().reveal('header', { delay: 100 });
     ScrollReveal().reveal('section .text', { delay: 200 });
     ScrollReveal().reveal('section img', { delay: 200 });
     
@@ -19,12 +18,9 @@ const sr = ScrollReveal({
     
     ScrollReveal().reveal('section .container', { delay: 600 });
 
-
-const links = document.querySelectorAll(".pos-f-t li")
+const links = document.querySelectorAll("header nav ul li a")
 
 links.forEach(link => {
         link.addEventListener("click", () => {
-        console.log("Hey")
-        const menu = document.querySelector(".collapse.show")
-        menu.classList.remove("show")
+        headerNav.classList.remove("show")
 })})

@@ -70,3 +70,21 @@ section {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.toggle img {
+    position: absolute;
+    z-index: 1000;
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    transition: 0.2s;
+    right: 10px;
+}
+
+.icon-menu {
+    background-color: var(--bg-color);
+}
+
+.icon-menu img {
+    filter: brightness(100%) contrast(10%);
+}

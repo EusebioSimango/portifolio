@@ -5,10 +5,19 @@
 
 /* Header */
 header {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
+    background-color: var(--bg-color);
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin: auto;
+}
+
+.toggle {
     position: none;
+    visibility: hidden;
+    opacity: 0;
 }
 
 header.show {
@@ -17,7 +26,7 @@ header.show {
     width: 100%;
     max-width: 1250px;
     display: flex;
-    position: sticky;
+    position: fixed;
     opacity: 1;
     visibility: visible;
     justify-content: space-between;
@@ -33,7 +42,11 @@ header nav {
 
 header nav ul {
     font-size: 18px;
+    padding: 20px;
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header nav a {
@@ -46,11 +59,6 @@ header nav a {
 header nav ul li a:hover {
     color: var(--title);
     background-color: var(--bt-color-cv);
-}
-
-header nav ul {
-    display: flex;
-    align-items: center;
 }
 
 header nav ul li {
@@ -240,24 +248,64 @@ section#myskills .skills ul li:hover,
 
 /* Media Queries */
 @media (max-width: 700px) {
-
-    main.hidden {
-        display: none;
-        opacity: 0;
-        visibility: hidden;
-        position: none;
+    .toggle {
+        position: static;
+        visibility: visible;
+        opacity: 1;
     }
 
     header {
-        height: 100vh;
+        height: 50px;
     }
-
+    
     header nav ul {
-        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+        position: static;
+        display: none;
     }
 
-    header nav ul li {
-        margin: 40px 0px;
-        font-size: 2em;
+    header .icon-menu img {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header.show .icon-menu img {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    header .icon-close img {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    header.show .icon-close img {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header.show {
+        position: fixed;
+        z-index: 10;
+    }
+
+    header.show nav ul li {
+        margin: 0;
+    }
+
+    header.show nav ul {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-around;
+        align-items: center;
     }
 }
