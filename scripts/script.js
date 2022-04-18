@@ -1,22 +1,28 @@
-const sr = ScrollReveal({
-        origin: 'top',
-        distance: '50px',
-        duration: 2500,
-        reset: true
-    });
-    
-    ScrollReveal().reveal('section .text', { delay: 200 });
-    ScrollReveal().reveal('section img', { delay: 200 });
-    
-    ScrollReveal().reveal('section .group', { delay: 500 });
-    ScrollReveal().reveal('section img', { delay: 300 });
-    
-    ScrollReveal().reveal('section .project', { delay: 400 });
-    ScrollReveal().reveal('section .service', { delay: 400 });
+const sections = document.querySelectorAll("section")
 
-    ScrollReveal().reveal('section .text h1', { delay: 400 });
-    
-    ScrollReveal().reveal('section .container', { delay: 600 });
+document.addEventListener("scroll", () => {
+      console.log("scrolling")
+      
+      const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+      console.log(checkpoint)
+
+      sections.forEach(section => {
+
+            const divTop = section.offsetTop
+            const divHeight = section.offsetHeight
+
+
+            const checkpointStart = checkpoint >= divTop
+            const checkpointEnd = checkpoint <= divTop + divHeight
+
+
+        if (checkpointStart && checkpointEnd) {
+                section.classList.add("scroll")
+      } else {
+              section.classList.remove("scroll")
+        }
+      })
+})
 
 const links = document.querySelectorAll("header nav ul li a")
 

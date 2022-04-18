@@ -226,6 +226,7 @@ section#services .service .text h3 {
 /* Myskills */
 section#myskills .skills {
     width: 100%;
+    height: 100vh;
 }
 
 section#myskills .skills ul {
