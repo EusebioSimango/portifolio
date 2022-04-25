@@ -47,6 +47,16 @@ a {
     color: white;
 }
 
+img {
+    max-width: 500px;
+    border-radius: 8%;
+}
+
+p a {
+    display: inline-block;
+    margin: 10px 0 5px 0;
+}
+
 a:hover {
     text-decoration: none;
     color: white;
@@ -62,9 +72,8 @@ main {
 section {
     padding: 20px;
     max-width: 1250px;
-    height: 100%;
-    transform: translateX(-100%);
-    margin: 50px auto;
+    font-size: 1.5rem;
+    margin: 50px auto 100px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,16 +81,14 @@ section {
     flex-wrap: wrap;
 }
 
-.scroll {
-    animation: move 0.3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+button {
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-@keyframes move {
-    100% {
-        transform: translateX(0%);
-    }
+button:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
 }
 
 .toggle img {
