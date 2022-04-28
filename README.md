@@ -10,10 +10,8 @@ This is my personal portfolio.
 This project was developed with the following technologies:
 - HTML
 - CSS
-- JavaScript
+- Vanilla JavaScript
 
-### Libraries
-- [ScrollReveal](https://scrollrevealjs.org)
 
 ## 🔖 Layout
 
@@ -25,4 +23,4 @@ You can acess it by clicking [here](https://jeffermarcelino.github.io/portifolio
 
 <br>
 
-Made by ♥ :wave: [Jeffer Marcelino!](https://github.com/JefferMarcelino/)
+Made by ♥ :wave: [me!](https://github.com/JefferMarcelino/)
