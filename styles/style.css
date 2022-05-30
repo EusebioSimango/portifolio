@@ -148,7 +148,9 @@ section#about .contacts .group {
 
 section#about .contacts .contact {
     background-color: #212121;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     clip-path: circle();
     padding: 17px;
     margin-bottom: 10px;

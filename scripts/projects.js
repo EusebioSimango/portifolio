@@ -30,7 +30,7 @@ const projects = [
 		techs: 'HTML, CSS, JavaScript, ExpressJS and SQLite3',
 	},
 	{
-		url: '',
+		url: 'https://jeffermarcelino.github.io/codelandia-challenges/',
 		title: 'Codelandia Challenges',
 		description: 'This was created by me, here you find the solutions of the Codelandia server challenges on Discord. And you can find others simple front-end projects.',
 		gitRepo: 'https://github.com/JefferMarcelino/codelandia-challenges',
