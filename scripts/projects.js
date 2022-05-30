@@ -7,6 +7,13 @@ const projects = [
 		description: 'his is a simple to-do app that you can make a list of things you want to do and and tasks are saved in local storage.',
 		gitRepo: 'https://github.com/JefferMarcelino/todo-app',
 		techs: 'ReactJS'
+	},
+	{
+		url: '',
+		title: 'Beautysalon',
+		description: 'A landing-page for a hair salon, where you can find a lot informations with just a click.',
+		gitRepo: 'https://github.com/JefferMarcelino/beautysalon-nlw6-origin',
+		techs: 'HTML, CSS and JavaScript',
 	}
 ]
 
